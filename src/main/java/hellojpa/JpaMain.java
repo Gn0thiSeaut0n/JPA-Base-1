@@ -17,13 +17,13 @@ public class JpaMain {
         tx.begin();
 
         try {
-//            Member findMember = em.find(Member.class, 1L);
 
-            List<Member> result = em.createQuery("select m from Member as m", Member.class).setFirstResult(1).setMaxResults(10).getResultList();
+            //영속
+            Member findMember1 = em.find(Member.class, 100L);
+            Member findMember2 = em.find(Member.class, 100L);
 
-            for (Member member : result) {
-                System.out.println("member.name = " + member.getName());
-            }
+            System.out.println("result = " + (findMember1 == findMember2));
+
 
             tx.commit();
         } catch (Exception e) {
