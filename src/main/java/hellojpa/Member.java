@@ -1,27 +1,15 @@
 package hellojpa;
 
-<<<<<<< HEAD
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
-=======
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
->>>>>>> 76919d755fcf657e0caf3f5315d92045885273e1
 
 @Entity
 public class Member {
 
     @Id
     private Long id;
-<<<<<<< HEAD
-=======
-
-    @Column(unique = true, length = 10)
-    private String name;
->>>>>>> 76919d755fcf657e0caf3f5315d92045885273e1
 
     @Column(name = "name", nullable = false)
     private String username;
@@ -39,7 +27,6 @@ public class Member {
 
     private LocalDate testLocalDate;
     private LocalDateTime testLocalDateTime;
-
 
     @Lob
     private String description;
